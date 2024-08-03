@@ -196,12 +196,13 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     nav ul {
-        flex-direction: column;
-        margin-top: 10px;
+        flex-direction: row;
+        margin-top: 0;
     }
 
     .video-overlay h1 {
