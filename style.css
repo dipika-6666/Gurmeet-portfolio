@@ -1,3 +1,15 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
 /* Header */
 header {
     background-color: #003366; /* Dark navy blue */
@@ -12,7 +24,7 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Space between logo and navigation */
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -23,34 +35,179 @@ header {
     font-size: 1.5rem;
 }
 
-/* Navigation Styles */
 nav {
-    margin-left: auto; /* Aligns navigation to the right */
+    margin-left: auto;
 }
 
 nav ul {
-    list-style: none; /* Removes bullets */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Makes the list items display in a row */
-    gap: 1rem; /* Space between each navigation item */
+    display: flex;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    display: block;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #003366; /* Darker navy blue for hover effect */
-    background-color: #fff; /* White background on hover */
-    border-radius: 4px; /* Rounds the corners on hover */
+    color: #ccc;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.video-overlay p {
+    font-size: 1.5rem;
+}
+
+/* Main Content */
+main {
+    padding: 5rem 1rem 1rem;
+    margin-top: 70px; /* Offset for fixed header */
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.project {
+    position: relative;
+    width: calc(33.333% - 1rem);
+    height: 200px;
+    background-color: #003366; /* Dark navy blue */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.project:nth-child(4), .project:nth-child(5) {
+    width: calc(50% - 1rem);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+.project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #003366; /* Dark navy blue */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    text-align: center;
+    padding: 1rem;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.project:hover .project-image img {
+    opacity: 0.3;
+}
+
+.project:hover .project-details {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #003366; /* Dark navy blue */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #002244; /* Darker navy blue */
 }
