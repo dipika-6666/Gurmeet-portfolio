@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurmeet Singh Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Gurmeet Singh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -35,6 +34,11 @@
     </div>
 
     <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio. I am a web designer and developer with a passion for creating beautiful and functional websites.</p>
+        </section>
+
         <section id="portfolio">
             <h2>My Work</h2>
             <div class="projects-container">
@@ -44,7 +48,7 @@
                     </div>
                     <div class="project-details">
                         <h3>Project 1</h3>
-                        <p>A full-featured e-commerce platform with a shopping cart, product listings, and a secure checkout system.</p>
+                        <p>Description of Project 1.</p>
                     </div>
                 </div>
                 <div class="project">
@@ -53,7 +57,7 @@
                     </div>
                     <div class="project-details">
                         <h3>Project 2</h3>
-                        <p>A responsive personal portfolio website designed to showcase my web development skills and projects.</p>
+                        <p>Description of Project 2.</p>
                     </div>
                 </div>
                 <div class="project">
@@ -86,31 +90,21 @@
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Gurmeet, a passionate web developer and designer with a love for creating beautiful and functional websites. Welcome to my portfolio where you can explore my work and get in touch with me.</p>
-        </section>
-
         <section id="contact">
             <h2>Contact Me</h2>
-            <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
+
+                <button type="submit">Send</button>
             </form>
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p>Phone: (123) 456-7890</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Gurmeet Singh</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
