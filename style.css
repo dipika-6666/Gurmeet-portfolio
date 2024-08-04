@@ -144,46 +144,74 @@ h2 {
     background-color: #003366; /* Dark navy blue */
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.5s;
+    perspective: 1000px; /* Allows for 3D rotation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
 }
 
-.project:nth-child(4), .project:nth-child(5) {
-    width: calc(50% - 1rem); /* 2 boxes in a row */
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.project-image,
+.project-details {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+    color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.5s;
+    border-radius: 8px;
 }
 
-.project-details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #003366; /* Dark navy blue */
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    text-align: center;
-    padding: 1rem;
+.project:hover .project-image {
     transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.project:hover .project-image img {
-    opacity: 0.3;
 }
 
 .project:hover .project-details {
-    opacity: 1;
     transform: rotateY(0deg);
+}
+
+.project-details {
+    background-color: #002244; /* Darker navy blue */
+    transform: rotateY(-180deg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-button {
+    background-color: #fff;
+    color: #003366;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #003366;
+    color: #fff;
 }
 
 /* Contact Form */
@@ -217,4 +245,44 @@ form button {
 
 form button:hover {
     background-color: #002244; /* Darker navy blue */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        height: 200px;
+    }
+
+    .video-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .video-overlay p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .video-overlay p {
+        font-size: 1rem;
+    }
 }
