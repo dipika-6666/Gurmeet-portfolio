@@ -22,7 +22,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,8 +66,25 @@ nav ul li a:hover {
     border-radius: 4px; /* Rounds the corners on hover */
 }
 
+/* Hamburger Menu */
+.burgerMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.burgerMenu div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
 /* Video Section */
-.video-section {
+.videoSection {
     position: relative;
     height: 100vh; /* Full viewport height */
     overflow: hidden;
@@ -76,7 +93,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.video-section video {
+.videoSection video {
     position: absolute;
     top: 0;
     left: 0;
@@ -86,7 +103,7 @@ nav ul li a:hover {
     z-index: -1; /* Places the video behind the overlay text */
 }
 
-.video-overlay {
+.videoOverlay {
     position: relative;
     text-align: center;
     color: #fff;
@@ -96,12 +113,12 @@ nav ul li a:hover {
     z-index: 1; /* Ensures the text is above the video */
 }
 
-.video-overlay h1 {
+.videoOverlay h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
-.video-overlay p {
+.videoOverlay p {
     font-size: 1.5rem;
 }
 
@@ -129,8 +146,26 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+/* About Section */
+.aboutContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.aboutImage {
+    flex-shrink: 0;
+}
+
+.aboutImage img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* Projects */
-.projects-container {
+.projectsContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -156,8 +191,8 @@ h2 {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.project-image,
-.project-details {
+.projectImage,
+.projectDetails {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -173,22 +208,22 @@ h2 {
     box-sizing: border-box;
 }
 
-.project-image img {
+.projectImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.project:hover .project-image {
+.project:hover .projectImage {
     transform: rotateY(180deg);
 }
 
-.project:hover .project-details {
+.project:hover .projectDetails {
     transform: rotateY(0deg);
 }
 
-.project-details {
+.projectDetails {
     background-color: #002244; /* Darker navy blue */
     transform: rotateY(-180deg);
     text-align: center;
@@ -198,7 +233,7 @@ h2 {
     align-items: center;
 }
 
-.project-button {
+.projectButton {
     background-color: #fff;
     color: #003366;
     padding: 0.5rem 1rem;
@@ -209,7 +244,7 @@ h2 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.project-button:hover {
+.projectButton:hover {
     background-color: #003366;
     color: #fff;
 }
@@ -225,7 +260,8 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -249,7 +285,7 @@ form button:hover {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .header-container {
+    .headerContainer {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -258,7 +294,7 @@ form button:hover {
         margin-top: 1rem;
     }
 
-    .projects-container {
+    .projectsContainer {
         flex-direction: column;
         align-items: center;
     }
@@ -268,21 +304,35 @@ form button:hover {
         height: 200px;
     }
 
-    .video-overlay h1 {
+    .videoOverlay h1 {
         font-size: 2.5rem;
     }
 
-    .video-overlay p {
+    .videoOverlay p {
         font-size: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
-    .video-overlay h1 {
+    .videoOverlay h1 {
         font-size: 2rem;
     }
 
-    .video-overlay p {
+    .videoOverlay p {
         font-size: 1rem;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .burgerMenu:hover + nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 }
