@@ -68,7 +68,7 @@ nav ul li a:hover {
 
 .burgerMenu {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     cursor: pointer;
 }
 
