@@ -76,7 +76,8 @@ nav ul li a:hover {
 .menuIcon .bar {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: #003366; /* Dark navy blue */
+    color: #fff;
     margin: 6px 0;
     transition: 0.3s;
 }
