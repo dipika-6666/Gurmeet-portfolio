@@ -131,13 +131,16 @@ h2 {
 
 /* Projects */
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: space-between;
 }
 
 .project {
     position: relative;
+    width: calc(33.333% - 1rem); /* 3 boxes in a row */
+    height: 200px;
     background-color: #003366; /* Dark navy blue */
     border-radius: 8px;
     overflow: hidden;
@@ -256,7 +259,13 @@ form button:hover {
     }
 
     .projects-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        height: 200px;
     }
 
     .video-overlay h1 {
@@ -269,10 +278,6 @@ form button:hover {
 }
 
 @media (max-width: 480px) {
-    .projects-container {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-    }
-
     .video-overlay h1 {
         font-size: 2rem;
     }
