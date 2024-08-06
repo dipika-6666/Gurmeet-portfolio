@@ -66,6 +66,21 @@ nav ul li a:hover {
     border-radius: 4px; /* Rounds the corners on hover */
 }
 
+/* Hamburger Menu Icon */
+.menuIcon {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menuIcon .bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
 /* Video Section */
 .video-section {
     position: relative;
