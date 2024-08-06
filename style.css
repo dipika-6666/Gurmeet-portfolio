@@ -66,19 +66,7 @@ nav ul li a:hover {
     border-radius: 4px; /* Rounds the corners on hover */
 }
 
-.burgerMenu {
-    display: none;
-    flex-direction: row;
-    cursor: pointer;
-}
 
-.burgerMenu .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.3s;
-}
 
 /* Video Section */
 .videoSection {
