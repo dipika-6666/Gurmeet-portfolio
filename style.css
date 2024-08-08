@@ -66,6 +66,10 @@ nav ul li a:hover {
     border-radius: 4px; /* Rounds the corners on hover */
 }
 
+menu a {
+    color: white;
+}
+    
 /* Hamburger Menu Icon */
 .menuIcon {
     display: none; /* Hidden by default */
