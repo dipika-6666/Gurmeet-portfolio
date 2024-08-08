@@ -55,6 +55,8 @@ menu a {
     padding: 15px 0;
     transition: 1s;
 
+    
+}
 
 menu a:hover {
     color: #003366; /* Darker navy blue for hover effect */
