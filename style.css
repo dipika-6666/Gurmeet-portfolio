@@ -50,7 +50,7 @@ menu {
 menu a {
     color: white;
     text-decoration: none;
-    flex-basis: 25%;
+    flex-basis: 50%;
     text-align: center;
     padding: 25px 0;
     transition: 1s;
