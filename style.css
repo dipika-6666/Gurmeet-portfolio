@@ -68,8 +68,20 @@ nav ul li a:hover {
 
 menu a {
     color: white;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
 }
-    
+
+menu a:hover {
+    color: #003366; /* Darker navy blue for hover effect */
+    background-color: #fff; /* White background on hover */
+    border-radius: 4px; /* Rounds the corners on hover */
+}
+
 /* Hamburger Menu Icon */
 .menuIcon {
     display: none; /* Hidden by default */
