@@ -50,13 +50,19 @@ menu {
 menu a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
     flex-basis: 50%;
+    padding: 0.5rem 1rem;
     text-align: center;
-    padding: 25px 0;
-    transition: 1s;
-
-    
+    display: flex;
+    transition: 1s;   
+     transition: color 0.3s, background-color 0.3s;
+    list-style: none;
 }
+
+
+
+
 
 menu a:hover {
     color: #003366; /* Darker navy blue for hover effect */
