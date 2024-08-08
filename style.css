@@ -40,18 +40,21 @@ nav {
 }
 
 
-menu a {
-   
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-   padding: 0.5rem 1rem;
-    display: flex;
-    transition: color 0.3s, background-color 0.3s;
-    list-style: none;
-      
-    
+
+menu {
+    display: Flex;
+    justify-content: space-evenly;
+
 }
+
+menu a {
+    color: white;
+    text-decoration: none;
+    flex-basis: 25%;
+    text-align: center;
+    padding: 15px 0;
+    transition: 1s;
+
 
 menu a:hover {
     color: #003366; /* Darker navy blue for hover effect */
