@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurmeet Singh's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Gurmeet Singh</h1>
+            </div>
+          <!-- Navigation Bar -->
+        <nav class="wrapper">
+            <menu>
+                <a href="index.html">Home</a>
+               
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </menu>
+        </nav>
+            <div class="menuIcon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+         <section id="gallery">
+            <button onclick="window.location.href='index.html#portfolio'" class="closeButton">Back to Portfolio</button>
+         </section>
+        <section class="gallerySection">
+            <h2>Label Designs - Editorial</h2>
+            <div class="galleryContainer">
+                <img src="all in one_Box Mock-up 4 copy.jpg" alt="Project Image 1" class="galleryImage">
+                <img src="Bottle Mockup_1.jpg" alt="Project Image 2" class="galleryImage">
+                <img src="Bottle Mockup-2.jpg" alt="Project Image 3" class="galleryImage">
+                <img src="Bottle Mockup-3_v1.jpg" alt="Project Image 4" class="galleryImage">
+                <img src="Pearl Rose_Mockup-1.jpg" alt="Project Image 5" class="galleryImage">
+                <img src="all in one_Box Mock-up 4 copy 2.jpg" alt="Project Image 6" class="galleryImage">
+                <img src="Bottle_refo.jpg" alt="Project Image 7" class="galleryImage">
+                <img src="Pearl Rose_Mockup-3.jpg" alt="Project Image 8" class="galleryImage">
+                <img src="Pearl Rose_Mockup-4.jpg" alt= "Project Image 9" class="galleryImage">
+                <img src="Can_design.jpg" alt="Project Image 10" class="galleryImage">
+                
+                
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
