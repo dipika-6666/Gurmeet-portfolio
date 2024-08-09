@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="logo">
+                <h1>Gurmeet Singh</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="burgerMenu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallerySection">
+            <h2>Label Designs - Editorial</h2>
+            <div class="galleryContainer">
+                <img src="all in one_Box Mock-up 4 copy.jpg" alt="Project Image 1" class="galleryImage">
+                <img src="image2.jpg" alt="Project Image 2" class="galleryImage">
+                <img src="image3.jpg" alt="Project Image 3" class="galleryImage">
+                <img src="image4.jpg" alt="Project Image 4" class="galleryImage">
+                <img src="image5.jpg" alt="Project Image 5" class="galleryImage">
+                <img src="image6.jpg" alt="Project Image 6" class="galleryImage">
+                <img src="image7.jpg" alt="Project Image 7" class="galleryImage">
+                <img src="image8.jpg" alt="Project Image 8" class="galleryImage">
+                <img src="image9.jpg" alt="Project Image 9" class="galleryImage">
+                <img src="image10.jpg" alt="Project Image 10" class="galleryImage">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
