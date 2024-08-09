@@ -186,6 +186,22 @@ h2 {
     background-color: #002244;
 }
 
+/* Gallery styling */
+.galleryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.galleryImage {
+    max-width: 100%;
+    height: auto;
+    flex-basis: calc(25% - 10px); /* Adjust the width of each image in the grid */
+}
+
+
 .imageGallery {
     display: flex;
     flex-wrap: wrap;
@@ -418,4 +434,18 @@ form button:hover {
 @media (max-width: 480px) {
     /* Adjustments for even smaller screens if needed */
     
+}
+/* Responsive design */
+@media (max-width: 768px) {
+
+
+    .galleryImage {
+        flex-basis: calc(50% - 10px); /* Adjust width of images on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryImage {
+        flex-basis: calc(100% - 10px); /* Make images full width on very small screens */
+    }
 }
