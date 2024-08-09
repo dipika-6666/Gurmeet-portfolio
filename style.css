@@ -1,4 +1,10 @@
 /* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -148,10 +154,51 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+
+/* Gallery Section */
+#gallery {
+    padding: 5rem 1rem 1rem;
+    margin-top: 70px; /* Offset for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeButton {
+    background-color: #003366;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.closeButton:hover {
+    background-color: #002244;
+}
+
+.imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.imageGallery img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain; /* Ensures images scale properly */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.imageGallery img:hover {
+    transform: scale(1.05);
 }
 
 /* Projects */
